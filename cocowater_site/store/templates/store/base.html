@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cocowater</title>
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="icon" href="{% static 'images/favicon.ico' %}">
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+
+  <!-- Navigation -->
+  <nav class="bg-green-800 text-white shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="text-2xl font-extrabold">
+          <a href="#hero" class="hover:text-green-300">Cocowater</a>
+        </div>
+        <div class="hidden md:flex space-x-6">
+          <a href="{% url 'home' %}#hero" class="hover:text-green-300 font-semibold">Home</a>
+          <a href="{% url 'home' %}#Benefits" class="hover:text-green-300 font-semibold">Shop</a>
+          <a href="{% url 'home' %}#about" class="hover:text-green-300 font-semibold">About</a>
+          <a href="{% url 'home' %}#contact" class="hover:text-green-300 font-semibold">Contact</a>
+        </div>
+        <div class="flex items-center">
+          <a href="{% url 'cart' %}" class="bg-green-600 hover:bg-green-700 px-4 py-2 rounded flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4" />
+              <circle cx="7" cy="21" r="2" />
+              <circle cx="17" cy="21" r="2" />
+            </svg>
+            Cart
+          </a>
+        </div>
+        <div class="md:hidden ml-4">
+          <!-- (Optional: Mobile nav toggle JS if needed later) -->
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main -->
+  <main class="flex-grow">
+    {% block content %}{% endblock %}
+  </main>
+
+</body>
+</html>

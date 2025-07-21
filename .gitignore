@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.log
+*.sqlite3
+*.db
+
+# Virtual Environment
+venv/
+
+# Node (JavaScript)
+node_modules/
+
+# Django Static & Media
+staticfiles/
+media/
+
+# Environment & Secret Files
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
