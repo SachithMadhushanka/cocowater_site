@@ -140,3 +140,6 @@ EMAIL_HOST_PASSWORD = 'yivv dnon xdyw miac'
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 CONTACT_RECEIVER_EMAIL = 'www.s0722780466@gmail.com'  # Your email that receives contact messages
+
+import os
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')

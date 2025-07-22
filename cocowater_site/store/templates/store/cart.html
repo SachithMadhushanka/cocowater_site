@@ -5,7 +5,8 @@
 <div class="max-w-4xl mx-auto p-8 bg-white shadow-lg rounded-lg">
     <h2 class="text-3xl font-extrabold mb-6 text-gray-800 border-b pb-4">Your Cart</h2>
 
-    <table class="w-full table-auto border border-gray-200 rounded-md overflow-hidden shadow-sm mb-8">
+    <div class="overflow-x-auto mb-8">
+      <table class="min-w-[600px] w-full table-auto border border-gray-200 rounded-md overflow-hidden shadow-sm">
         <thead class="bg-gray-50">
             <tr>
                 <th class="p-4 text-left text-gray-700 font-semibold uppercase text-sm">Item</th>
@@ -39,7 +40,9 @@
             <tr><td colspan="5" class="p-6 text-center text-gray-500 italic">Your cart is empty.</td></tr>
             {% endfor %}
         </tbody>
-    </table>
+      </table>
+    </div>
+
 
     <h3 class="text-2xl font-bold mb-8 text-gray-900 text-right">Total: ${{ cart_total }}</h3>
 
